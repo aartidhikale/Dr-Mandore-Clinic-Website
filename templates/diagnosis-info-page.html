@@ -1,0 +1,44 @@
+<!-- This page is useless we can re,ove it after all setup -->
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+        <section class="p-0 parallax md-h-300px sm-h-300px" data-parallax-background-ratio="0.3" style="background-image: url('{% static 'all_images/back-diagnosis-info.png' %}');">
+            <div class="container-fluid position-relative  wow animate__fadeIn " data-wow-delay="0.2s">
+                <div class="row small-screen ">
+                    <div class="col-12 col-xl-5 offset-lg-1 col-lg-6 col-md-8 col-sm-10 d-flex flex-column justify-content-center md-padding-35px-left xs-padding-15px-left">
+                        <h2 class="text-white alt-font font-weight-500 letter-spacing-minus-1px line-height-50 sm-line-height-45 xs-line-height-30 no-margin-bottom"><span class="font-weight-600">Diagnosis Name</span></h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+   
+         <section class="bg-light-gray home-dentist ">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12 col-xl-5 col-lg-5 offset-lg-1  text-lg-left  wow animate__fadeIn " data-wow-delay="0.3s">
+
+                        <h4 class="alt-font font-weight-400 text-extra-dark-gray letter-spacing-minus-1px margin-25px-bottom">
+                            <span class="font-weight-600">Overview</span>
+                        </h4>
+
+                        <p class="w-90 d-inline-block">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor incididunt ut labore et dolore magna ut enim ad minim veniam nostrud exercitation. Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor incididunt ut labore et dolore magna ut enim ad minim veniam nostrud exercitation.Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor incididunt ut labore et dolore magna ut enim ad minim veniam nostrud exercitation.Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor incididunt ut labore et dolore magna ut enim ad minim veniam nostrud exercitation.Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor incididunt ut labore et dolore magna ut enim ad minim veniam nostrud exercitation.</p>
+                        
+                    
+                </div> 
+
+                    <div class="col-12 col-xl-6 col-lg-5 col-md-10  wow animate__fadeIn " data-wow-delay="0.6s">
+                        <div class="position-relative w-95 md-w-100">
+                            <img  src="{% static 'all_images/dummy.png' %}" alt="" />
+                            
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+        </section>
+
+{% endblock %}
+
+   
+

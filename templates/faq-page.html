@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+     <!-- start hero section -->
+        <section class="p-0 parallax" data-parallax-background-ratio="0.3" style="background-image: url('{% static 'all_images/back-faq.jpg' %}');">
+            <div class="container-fluid position-relative wow animate__fadeIn " data-wow-delay="0.2s">
+                <div class="row small-screen md-h-300px sm-h-300px">
+                    <div class="col-12 col-xl-5 offset-lg-1 col-lg-6 col-md-8 col-sm-10 d-flex flex-column justify-content-center md-padding-35px-left xs-padding-15px-left">
+                         <h2 class="text-white alt-font font-weight-500 letter-spacing-minus-1px line-height-50 sm-line-height-45 xs-line-height-30 no-margin-bottom"><span class="font-weight-600">Patient FAQ's</span></h2>
+                        <h6 style="color:#22CEC8;  " class="alt-font  margin-15px-bottom d-inline-block">common questions</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end hero section -->
+
+
+
+
+
+
+
+
+        <section class="overflow-visible">
+            
+                <div class="container">
+                  
+                    <div class="row" >
+                       
+                    <div class="col-12 col-lg-12 md-margin-50px-bottom sm-margin-30px-bottom wow animate__fadeIn ">
+                      
+                        <div class="panel-group accordion-event accordion-style-03" id="accordion2" data-active-icon="fa-angle-down" data-inactive-icon="fa-angle-right">
+                            <!-- start accordion item -->
+                           
+                            <div class="panel bg-white box-shadow-small border-radius-5px">
+                                {% for p in products1 %}
+                                <div class="panel-heading active-accordion">
+                                   
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne" aria-expanded="false">
+                                        <div class="panel-title">
+                                            <span class="alt-font text-extra-dark-gray d-inline-block font-weight-500">{{ p.question }}</span>
+                                            <i class="indicator fas fa-angle-down text-iris-blue icon-extra-small"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                              
+                                <div id="collapseOne" class="panel-collapse collapse show" data-parent="#accordion2">
+                                    <div class="panel-body">{{ p.answer }}</div>
+                                </div>
+                                {% endfor %} 
+                               
+                            </div>
+                            <!-- end accordion item -->
+                            
+                            
+                        </div>
+                       
+                       
+                    </div>
+                    
+                </div>
+                
+
+
+                    
+                    </div>
+                </div>
+            </section>
+
+{% endblock %}
+   

@@ -1,0 +1,383 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!-- start hero section -->
+        <section class="p-0 parallax" data-parallax-background-ratio="0.3" style="background-image: url('{% static 'all_images/login-mandore.jpg' %}');">
+            <div class="container-fluid position-relative wow animate__fadeIn " data-wow-delay="0.2s">
+                <div class="row small-screen md-h-300px sm-h-300px">
+                    <div class="col-12 col-xl-5 offset-lg-1 col-lg-6 col-md-8 col-sm-10 d-flex flex-column justify-content-center md-padding-35px-left xs-padding-15px-left">
+                         <h3 class="text-white alt-font font-weight-500 letter-spacing-minus-1px line-height-50 sm-line-height-45 xs-line-height-30 no-margin-bottom"><span class="font-weight-600">Login-Register</span></h3>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end hero section -->
+
+
+        
+
+<!-- start section -->
+        <section class=" parallax overflow-visible wow animate__fadeIn page-title-med" id="services" data-parallax-background-ratio="0.1" style="background-image:  visibility: visible; animation-name: fadeIn;">
+            <div class="container ">
+                <div class="row ">
+      
+
+                    <aside class="col-12 col-lg-3 col-xl-3 col-md-12 ">
+                      <div class="sticky-top lg-position-relative">
+                        <div class=" bg-iris-blue w-100 overflow-hidden  padding-4-rem-tb lg-padding-4-rem-tb md-padding-4-rem-tb position-relative  wow animate__fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <ul class="nav nav-tabs list-style-07 filter-category">
+                                <li class="nav-item"><a data-toggle="tab" href="#details" class="nav-link active"><h1 class="alt-font text-white font-weight-500 no-margin-bottom text-center text-lg-left">My Details</h1></a></li>
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#edit"><h1 class="alt-font text-white font-weight-500 no-margin-bottom text-center text-lg-left">Edit Details</h1></a></li>
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#consult"><h1 class="alt-font text-white font-weight-500 no-margin-bottom text-center text-lg-left">My Consultation</h1></a></li>
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#appoin"><h1 class="alt-font text-white font-weight-500 no-margin-bottom text-center text-lg-left">My Appointment</h1></a></li>
+                                <li class="nav-item"><a class="nav-link"  href="{% url 'home' %}"><h1 class="padding-95px-top alt-font text-white font-weight-500 no-margin-bottom text-center text-lg-left">Log out</h1></a></li>
+                            </ul>
+                            <i class="fas fa-user title-extra-large-heavy text-extra-dark-gray opacity-2 position-absolute bottom-minus-20px right-minus-10px"></i>
+                        </div> 
+                        </div>   
+                    </aside>
+      
+  
+            
+                <div class="tab-content col-12 col-xl-9 col-lg-9 col-md-12">
+                    <!-- start tab item -->
+                    <div id="details" class="tab-pane fade in active show">
+                        <div class="col-12 col-xl-9 feature-box text-left box-shadow-large box-shadow-double-large-hover bg-light-gray padding-four-top padding-four-left col-lg-8 col-md-12 md-margin-40px-bottom offset-xl-1">
+                        <div class="row">
+                            <div class="col-12">
+
+                                <img class="rounded-circle border-all w-150px h-150px margin-15px-right margin-35px-bottom"  src="{% static 'all_images/testimonial1.jpg' %}" >
+                                
+                                <h5 class="alt-font font-weight-600 text-extra-dark-gray">Pravin Sonavane</h5>
+                  
+                                <div>
+                                    <span style=" color: black; " class="alt-font font-weight-500 d-block">Username</span>
+                                    <div><p class=" margin-10px-right">pravin123</p></div>
+                                </div>
+                                <div>
+                                    <span style=" color: black; " class="alt-font font-weight-500 d-block">Email</span>
+                                    <div><p class=" margin-10px-right">pravinson@gmail.com</p></div>
+                                </div>
+                                <div>
+                                    <span style=" color: black; " class="alt-font font-weight-500 d-block">Mob no.</span>
+                                    <div><p class=" margin-10px-right">9021792540</p></div>
+                                </div>
+                                <div>
+                                    <span style=" color: black; " class="alt-font font-weight-500 d-block">Gender</span>
+                                    <div><p class=" margin-10px-right">Male</p></div>
+                                </div>
+                                <div>
+                                    <span style=" color: black; " class="alt-font font-weight-500 d-block">DOB</span>
+                                    <div><p class=" margin-10px-right">10-09-2001</p></div>
+                                </div>
+                                <div>
+                                    <span style=" color: black; " class="alt-font font-weight-500 d-block">city</span>
+                                    <div><p class=" margin-10px-right">Nashik</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- end tab item -->
+                    <!-- start tab item -->
+                    <div id="edit" class="tab-pane fade">
+                        <div class="col-12 col-xl-9 feature-box text-left box-shadow-large box-shadow-double-large-hover bg-light-gray padding-four-top padding-four-left col-lg-8 col-md-12 md-margin-40px-bottom offset-xl-1">
+                        <div class="row">
+                            <div class="col-12 col-xl-">
+                                <div class="row">
+                                <img class="rounded-circle border-all w-150px h-150px margin-15px-right margin-35px-bottom"  src="{% static 'all_images/testimonial1.jpg' %}" >
+                                        <i class="feather icon-feather-edit icon-extra-small text-iris-blue"></i>
+                                </div>
+                                <div class="row padding-15px-left">
+                                <h5 class="alt-font font-weight-600 text-extra-dark-gray">Pravin Sonavane</h5>
+                                        <i class="feather icon-feather-edit padding-15px-left icon-extra-small text-iris-blue"></i>
+                                </div>
+                                <div> 
+                                    <div class="row padding-15px-left">
+                                         <span style=" color: black; " class="alt-font font-weight-500 d-block">Username</span>
+                                        <i class="feather icon-feather-edit padding-15px-left icon-extra-small text-iris-blue"></i>
+                                    </div>
+                                    <div><p class=" margin-10px-right">pravin123</p></div>
+                                </div>
+                                <div>
+                                    <div class="row padding-15px-left">
+                                         <span style=" color: black; " class="alt-font font-weight-500 d-block">Email</span>
+                                        <i class="feather icon-feather-edit padding-15px-left icon-extra-small text-iris-blue"></i>
+                                    </div>
+                                    <div><p class=" margin-10px-right">pravinson@gmail.com</p></div>
+                                </div>
+                                <div>
+                                    <div class="row padding-15px-left">
+                                         <span style=" color: black; " class="alt-font font-weight-500 d-block">Mob no.</span>
+                                        <i class="feather icon-feather-edit padding-15px-left icon-extra-small text-iris-blue"></i>
+                                    </div>
+                                    <div><p class=" margin-10px-right">9021792540</p></div>
+                                </div>
+                                <div>
+                                    <div class="row padding-15px-left">
+                                         <span style=" color: black; " class="alt-font font-weight-500 d-block">Gender</span>
+                                        <i class="feather icon-feather-edit padding-15px-left icon-extra-small text-iris-blue"></i>
+                                    </div>
+                                    <div><p class=" margin-10px-right">Male</p></div>
+                                </div>
+                                <div>
+                                    <div class="row padding-15px-left">
+                                         <span style=" color: black; " class="alt-font font-weight-500 d-block">DOB</span>
+                                        <i class="feather icon-feather-edit padding-15px-left icon-extra-small text-iris-blue"></i>
+                                    </div>
+                                    <div><p class=" margin-10px-right">10-09-2001</p></div>
+                                </div>
+                                <div class="">
+                                    <div class="row padding-15px-left">
+                                         <span style=" color: black; " class="alt-font font-weight-500 d-block">City</span>
+                                        <i class="feather icon-feather-edit padding-15px-left icon-extra-small text-iris-blue"></i>
+                                    </div>
+                                    <div><p class="">Nashik</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- end tab item -->
+                    <!-- start tab item -->
+                    <div id="consult" class="tab-pane fade">
+                        <div class="col-12 col-xl-9  box-shadow-large box-shadow-double-large-hover bg-light-gray padding-two-top col-lg-8 col-md-12 md-margin-40px-bottom offset-xl-1">
+                                <div class="author padding-50px-left">
+                                  <img class="rounded-circle w-60px h-60px margin-15px-right" src="{% static 'all_images/testimonial1.jpg' %}" alt="" >
+                                    <div class="d-inline-block align-middle">
+                                      <span class="alt-font font-weight-500 line-height-16px text-extra-dark-gray d-block">Sunil Suryavanshi</span>        
+                                    </div>
+                                </div>
+                            <div class="col-12 col-lg-12 ">
+                            <div class="padding-25px-tb panel-group accordion-event accordion-style-04" id="accordion4" data-active-icon="icon-feather-minus" data-inactive-icon="icon-feather-plus">
+                            <!-- start accordion item -->
+                            <div class="panel border-color-black-transparent">
+                                <div class="panel-heading">
+                                    <span class="panel-time">06:00 - 07:00</span>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion4" href="#accordion-style-4-1" aria-expanded="false">
+                                        <div class="panel-title">
+                                            <span class="text-extra-dark-gray d-inline-block font-weight-700">Yoga and Pilates</span>
+                                            <i class="text-extra-dark-gray feather icon-feather-plus"></i>
+                                        </div>
+                                    </a>
+                                    <span class="panel-speaker">By Edward Watson</span>
+                                </div>
+                                <div id="accordion-style-4-1" class="panel-collapse collapse" data-parent="#accordion4" style="">
+                                    <div class="panel-body">Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum.</div>
+                                </div>
+                            </div>
+                            <!-- end accordion item -->
+                            <!-- start accordion item -->
+                            <div class="panel border-color-black-transparent">
+                                <div class="panel-heading">
+                                    <span class="panel-time">08:00 - 09:00</span>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion4" href="#accordion-style-4-2" aria-expanded="false">
+                                        <div class="panel-title">
+                                            <span class="text-extra-dark-gray d-inline-block font-weight-700">Energy Blast</span>
+                                            <i class="indicator text-extra-dark-gray feather icon-feather-plus"></i>
+                                        </div>
+                                    </a>
+                                    <span class="panel-speaker">By Bryan Jonhson</span>
+                                </div>
+                                <div id="accordion-style-4-2" class="panel-collapse collapse" data-parent="#accordion4" style="">
+                                    <div class="panel-body">Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum.</div>
+                                </div>
+                            </div>
+                            <!-- end accordion item -->
+                            <!-- start accordion item -->
+                            <div class="panel border-color-black-transparent">
+                                <div class="panel-heading">
+                                    <span class="panel-time">10:00 - 11:00</span>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion4" href="#accordion-style-4-3" aria-expanded="false">
+                                        <div class="panel-title">
+                                            <span class="text-extra-dark-gray d-inline-block font-weight-700">Cardio Workout</span>
+                                            <i class="indicator text-extra-dark-gray feather icon-feather-plus"></i>
+                                        </div>
+                                    </a>
+                                    <span class="panel-speaker">By Jeremy Dupont</span>
+                                </div>
+                                <div id="accordion-style-4-3" class="panel-collapse collapse" data-parent="#accordion4" style="">
+                                    <div class="panel-body">Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum.</div>
+                                </div>
+                            </div>
+                            <!-- start accordion item -->
+                            <!-- end accordion item -->
+                            <div class="panel border-color-black-transparent">
+                                <div class="panel-heading">
+                                    <span class="panel-time">11:00 - 12:00</span>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion4" href="#accordion-style-4-4" aria-expanded="false">
+                                        <div class="panel-title">
+                                            <span class="text-extra-dark-gray d-inline-block font-weight-700">Athletics Classes</span>
+                                            <i class="indicator text-extra-dark-gray feather icon-feather-plus"></i>
+                                        </div>
+                                    </a>
+                                    <span class="panel-speaker">By Edward Watson</span>
+                                </div>
+                                <div id="accordion-style-4-4" class="panel-collapse collapse" data-parent="#accordion4" style="">
+                                    <div class="panel-body">Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum.</div>
+                                </div>
+                            </div>
+                            <!-- end accordion item -->
+                            <!-- start accordion item -->
+                            <div class="panel border-color-black-transparent">
+                                <div class="panel-heading">
+                                    <span class="panel-time">13:00 - 15:00</span>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion4" href="#accordion-style-4-5" aria-expanded="false">
+                                        <div class="panel-title">
+                                            <span class="text-extra-dark-gray d-inline-block font-weight-700">Boxercise</span>
+                                            <i class="indicator text-extra-dark-gray feather icon-feather-plus"></i>
+                                        </div>
+                                    </a>
+                                    <span class="panel-speaker">By Bryan Jonhson</span>
+                                </div>
+                                <div id="accordion-style-4-5" class="panel-collapse collapse" data-parent="#accordion4" style="">
+                                    <div class="panel-body">Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum.</div>
+                                </div>
+                            </div>
+                            <!-- end accordion item -->
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- end tab item -->
+                    <!-- start tab item -->
+                    <div id="appoin" class="tab-pane fade">
+                        <div class="col-12 col-xl-9  box-shadow-large box-shadow-double-large-hover bg-light-gray padding-two-top col-lg-8 col-md-12 md-margin-40px-bottom offset-xl-1">
+                        <div class="author padding-50px-left">
+                                  <img class="rounded-circle w-60px h-60px margin-15px-right" src="{% static 'all_images/testimonial1.jpg' %}" alt="" >
+                                    <div class="d-inline-block align-middle">
+                                      <span class="alt-font font-weight-500 line-height-16px text-extra-dark-gray d-block">Sunil Suryavanshi</span>        
+                                    </div>
+                                </div>
+                        <div class="col-12 col-lg-12 ">
+                        <div class="padding-25px-tb panel-group accordion-event accordion-style-04" id="accordion4" data-active-icon="icon-feather-minus" data-inactive-icon="icon-feather-plus">
+                            <!-- start accordion item -->
+                            <div class="panel border-color-black-transparent">
+                                <div class="panel-heading">
+                                   <span class="panel-time">10-09-2020</span>
+                                    <span class="panel-time">13:00 - 15:00</span>
+
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion4" href="#accordion-style-4-1" aria-expanded="false">
+                                        <div class="panel-title">
+                                            <span class="text-extra-dark-gray d-inline-block font-weight-700">Diagnosis-name</span>
+                                            <i class="indicator text-extra-dark-gray feather icon-feather-plus"></i>
+                                        </div>
+                                    </a>
+                                   
+                                </div>
+                                <div id="accordion-style-4-1" class="panel-collapse collapse" data-parent="#accordion4" style="">
+                                    <div class="panel-body">Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum.</div>
+                                </div>
+                            </div>
+                            <!-- end accordion item -->
+                            <!-- start accordion item -->
+                            <div class="panel border-color-black-transparent">
+                               <div class="panel-heading">
+                                   <span class="panel-time">10-09-2020</span>
+                                    <span class="panel-time">13:00 - 15:00</span>
+
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion4" href="#accordion-style-4-2" aria-expanded="false">
+                                        <div class="panel-title">
+                                            <span class="text-extra-dark-gray d-inline-block font-weight-700">Diagnosis-name</span>
+                                            <i class="indicator text-extra-dark-gray feather icon-feather-plus"></i>
+                                        </div>
+                                    </a>
+                                   
+                                </div>
+                                <div id="accordion-style-4-2" class="panel-collapse collapse" data-parent="#accordion4" style="">
+                                    <div class="panel-body">Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum.</div>
+                                </div>
+                            </div>
+                            <!-- end accordion item -->
+                            <!-- start accordion item -->
+                            <div class="panel border-color-black-transparent">
+                                <div class="panel-heading">
+                                   <span class="panel-time">10-09-2020</span>
+                                    <span class="panel-time">13:00 - 15:00</span>
+
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion4" href="#accordion-style-4-3" aria-expanded="false">
+                                        <div class="panel-title">
+                                            <span class="text-extra-dark-gray d-inline-block font-weight-700">Diagnosis-name</span>
+                                            <i class="indicator text-extra-dark-gray feather icon-feather-plus"></i>
+                                        </div>
+                                    </a>
+                                   
+                                </div>
+                                <div id="accordion-style-4-3" class="panel-collapse collapse" data-parent="#accordion4" style="">
+                                    <div class="panel-body">Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum.</div>
+                                </div>
+                            </div>
+                            <!-- start accordion item -->
+                            <!-- end accordion item -->
+                            <div class="panel border-color-black-transparent">
+                                <div class="panel-heading">
+                                   <span class="panel-time">10-09-2020</span>
+                                    <span class="panel-time">13:00 - 15:00</span>
+
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion4" href="#accordion-style-4-4" aria-expanded="false">
+                                        <div class="panel-title">
+                                            <span class="text-extra-dark-gray d-inline-block font-weight-700">Diagnosis-name</span>
+                                            <i class="indicator text-extra-dark-gray feather icon-feather-plus"></i>
+                                        </div>
+                                    </a>
+                                   
+                                </div>
+                                <div id="accordion-style-4-4" class="panel-collapse collapse" data-parent="#accordion4" style="">
+                                    <div class="panel-body">Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum.</div>
+                                </div>
+                            </div>
+                            <!-- end accordion item -->
+                            <!-- start accordion item -->
+                            <div class="panel border-color-black-transparent">
+                                <div class="panel-heading">
+                                   <span class="panel-time">10-09-2020</span>
+                                    <span class="panel-time">13:00 - 15:00</span>
+
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion4" href="#accordion-style-4-5" aria-expanded="false">
+                                        <div class="panel-title">
+                                            <span class="text-extra-dark-gray d-inline-block font-weight-700">Diagnosis-name</span>
+                                            <i class="indicator text-extra-dark-gray feather icon-feather-plus"></i>
+                                        </div>
+                                    </a>
+                                   
+                                </div>
+                                <div id="accordion-style-4-5" class="panel-collapse collapse" data-parent="#accordion4" style="">
+                                    <div class="panel-body">Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum.</div>
+                                </div>
+                            </div>
+                            <!-- end accordion item -->
+                            <!-- start accordion item -->
+                            <div class="panel border-color-black-transparent">
+                                <div class="panel-heading">
+                                   <span class="panel-time">10-09-2020</span>
+                                    <span class="panel-time">13:00 - 15:00</span>
+
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion4" href="#accordion-style-4-6" aria-expanded="false">
+                                        <div class="panel-title">
+                                            <span class="text-extra-dark-gray d-inline-block font-weight-700">Diagnosis-name</span>
+                                            <i class="indicator text-extra-dark-gray feather icon-feather-plus"></i>
+                                        </div>
+                                    </a>
+                                   
+                                </div>
+                                <div id="accordion-style-4-6" class="panel-collapse collapse" data-parent="#accordion4" style="">
+                                    <div class="panel-body">Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum.</div>
+                                </div>
+                            </div>
+                            <!-- end accordion item -->
+                        </div>
+                    </div>
+
+                    </div>
+                    </div>
+                    <!-- end tab item -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+{% endblock %}
+  
+
+

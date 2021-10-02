@@ -1,0 +1,1006 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+    <!-- start hero section -->
+    <section
+      class="p-0 parallax"
+      data-parallax-background-ratio="0.3"
+      style="background-image: url('{% static 'all_images/back-home.jpg' %}')"
+    >
+      <div class="container-fluid position-relative">
+        <div class="row full-screen md-h-800px sm-h-500px">
+          <div
+            class="
+              col-12 col-xl-5
+              offset-lg-1
+              col-lg-6 col-md-8 col-sm-10
+              d-flex
+              flex-column
+              justify-content-center
+              md-padding-35px-left
+              xs-padding-15px-left
+            "
+          >
+            <h2
+              class="
+                alt-font
+                text-extra-dark-gray
+                font-weight-600
+                letter-spacing-minus-2px
+                w-80
+                xl-w-100
+                margin-twelve-bottom
+                sm-margin-30px-bottom
+                text-white
+              "
+            >
+              TREATMENT IS NOT EXPENSIVE BUT NEGLECT IS
+            </h2>
+            <div class="d-inline-block">
+              <a
+                href="{% url 'consult' %}"
+                class="
+                  btn
+                  section-link
+                  btn-fancy btn-large btn-round-edge btn-iris-blue
+                  margin-35px-right
+                  xs-margin-20px-bottom
+                "
+                >Consult now</a
+              >
+              <span
+                class="
+                  alt-font
+                  text-extra-medium text-extra-dark-gray
+                  d-inline-block
+                  align-middle
+                  text-uppercase text-decoration-line-bottom
+                  font-weight-600
+                  text-white
+                "
+                >call now 9021792540</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end hero section -->
+
+    <!-- start section -->
+    <section class="half-section border-bottom border-color-medium-gray">
+      <div class="container">
+        <div
+          class="
+            row row-cols-1 row-cols-lg-3 row-cols-sm-2
+            justify-content-center
+          "
+        >
+          <!-- start feature box item -->
+          <div
+            class="
+              col
+              md-margin-40px-bottom
+              xs-margin-35px-bottom
+              wow
+              animate__fadeIn
+            "
+            data-wow-delay="0.2s"
+          >
+            <div
+              class="feature-box feature-box-left-icon last-paragraph-no-margin"
+            >
+              <div class="feature-box-icon line-height-0px">
+                <i class="line-icon-Timer icon-medium text-iris-blue"></i>
+              </div>
+              <div class="feature-box-content">
+                <div
+                  class="
+                    text-extra-dark-gray
+                    alt-font
+                    font-weight-500
+                    text-extra-medium
+                    margin-10px-bottom
+                  "
+                >
+                  24 Hours service
+                </div>
+                <p class="w-80 sm-w-100">
+                  Lorem ipsum dolor conctetur adipiscing eiusmod tempor
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end feature box item -->
+          <!-- start feature box item -->
+          <div
+            class="
+              col
+              md-margin-40px-bottom
+              xs-margin-35px-bottom
+              wow
+              animate__fadeIn
+            "
+            data-wow-delay="0.4s"
+          >
+            <div
+              class="feature-box feature-box-left-icon last-paragraph-no-margin"
+            >
+              <div class="feature-box-icon line-height-0px">
+                <i class="line-icon-Doctor icon-medium text-iris-blue"></i>
+              </div>
+              <div class="feature-box-content">
+                <div
+                  class="
+                    text-extra-dark-gray
+                    alt-font
+                    font-weight-500
+                    text-extra-medium
+                    margin-10px-bottom
+                  "
+                >
+                  Qualified doctors
+                </div>
+                <p class="w-80 sm-w-100">
+                  Lorem ipsum dolor conctetur adipiscing eiusmod tempor
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end feature box item -->
+          <!-- start feature box item -->
+          <div class="col wow animate__fadeIn" data-wow-delay="0.6s">
+            <div
+              class="feature-box feature-box-left-icon last-paragraph-no-margin"
+            >
+              <div class="feature-box-icon line-height-0px">
+                <i class="line-icon-Coin icon-medium text-iris-blue"></i>
+              </div>
+              <div class="feature-box-content">
+                <div
+                  class="
+                    text-extra-dark-gray
+                    alt-font
+                    font-weight-500
+                    text-extra-medium
+                    margin-10px-bottom
+                  "
+                >
+                  Affordable prices
+                </div>
+                <p class="w-80 sm-w-100">
+                  Lorem ipsum dolor conctetur adipiscing eiusmod tempor
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end feature box item -->
+        </div>
+      </div>
+    </section>
+    <!-- end section -->
+   
+    <section class="home-dentist big-section">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div
+            class="col-12 col-xl-4.5 col-lg-5 col-md-10 md-margin-5-rem-bottom"
+          >
+            <div class="position-relative w-95 md-w-100">
+              <img
+                class="border-radius-10px"
+                src="{% static 'all_images/home-image-2.jpg' %}"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="
+              col-12 col-xl-5 col-lg-6
+              offset-lg-1
+              text-center text-lg-left
+            "
+          >
+            <img
+              class="margin-50px-bottom"
+              src="{% static 'myimage/smile-icon.svg' %}"
+              alt=""
+            />
+            <h3
+              class="
+                alt-font
+                font-weight-400
+                text-extra-dark-gray
+                letter-spacing-minus-1px
+                margin-35px-bottom
+              "
+            >
+              The first homeopathic clinic that practices
+              <span class="font-weight-600">nontoxic remedy</span>
+            </h3>
+            <p class="w-90 d-inline-block">
+              Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor
+              incididunt ut labore et dolore magna ut enim ad minim veniam
+              nostrud exercitation.
+            </p>
+            <a
+              href="{% url 'about' %}"
+              class="
+                btn btn-fancy btn-large btn-round-edge btn-iris-blue
+                margin-20px-top
+              "
+              >About clinic</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section -->
+    <!-- start section -->
+    <section id="services" class="bg-white">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div
+            class="
+              col-12 col-xl-6 col-lg-7 col-md-8 col-sm-10
+              text-center
+              margin-6-rem-bottom
+              sm-margin-3-half-rem-bottom
+            "
+          >
+            <span
+              class="
+                alt-font
+                font-weight-500
+                text-iris-blue text-uppercase
+                d-block
+                margin-20px-bottom
+                letter-spacing-1px
+              "
+              >OUR SERVICES</span
+            >
+            <h4
+              class="
+                alt-font
+                font-weight-600
+                text-extra-dark-gray
+                letter-spacing-minus-1px
+              "
+            >
+              Committed to excellence homeopathic services
+            </h4>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2">
+          <!-- start feature box item -->
+          <div
+            class="
+              col
+              margin-30px-bottom
+              xs-margin-15px-bottom
+              wow
+              animate__fadeIn
+            "
+          >
+            <div
+              class="
+                feature-box
+                bg-white
+                box-shadow-small box-shadow-large-hover
+                border-radius-6px
+                padding-4-half-rem-all
+                lg-padding-3-rem-all
+              "
+            >
+              <div
+                class="feature-box-icon margin-35px-bottom lg-margin-25px-right"
+              >
+                <h4
+                  style="color: #00b8e6"
+                  class="alt-font font-weight-600 mb-0"
+                >
+                  01
+                </h4>
+              </div>
+
+              <div class="feature-box-content last-paragraph-no-margin">
+                <span
+                  class="
+                    alt-font
+                    font-weight-500
+                    text-large
+                    margin-15px-bottom
+                    d-block
+                    text-extra-dark-gray
+                    sm-margin-10px-bottom
+                  "
+                  >Allergies specialist</span
+                >
+                <p>
+                  Lorem ipsum dolor sit consectetur adipiscing incididunt ut
+                  labore
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end feature box item -->
+          <!-- start feature box item -->
+          <div
+            class="
+              col
+              margin-30px-bottom
+              xs-margin-15px-bottom
+              wow
+              animate__fadeIn
+            "
+          >
+            <div
+              class="
+                feature-box
+                bg-white
+                box-shadow-small box-shadow-large-hover
+                border-radius-6px
+                padding-4-half-rem-all
+                lg-padding-3-rem-all
+              "
+            >
+              <div
+                class="feature-box-icon margin-35px-bottom lg-margin-25px-right"
+              >
+                <h4
+                  style="color: #00b8e6"
+                  class="alt-font font-weight-600 mb-0"
+                >
+                  02
+                </h4>
+              </div>
+
+              <div class="feature-box-content last-paragraph-no-margin">
+                <span
+                  class="
+                    alt-font
+                    font-weight-500
+                    text-large
+                    margin-15px-bottom
+                    d-block
+                    text-extra-dark-gray
+                    sm-margin-10px-bottom
+                  "
+                  >Migraine specialist</span
+                >
+                <p>
+                  Lorem ipsum dolor sit consectetur adipiscing incididunt ut
+                  labore
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end feature box item -->
+          <!-- start feature box item -->
+          <div
+            class="
+              col
+              margin-30px-bottom
+              xs-margin-15px-bottom
+              wow
+              animate__fadeIn
+            "
+          >
+            <div
+              class="
+                feature-box
+                bg-white
+                box-shadow-small box-shadow-large-hover
+                border-radius-6px
+                padding-4-half-rem-all
+                lg-padding-3-rem-all
+              "
+            >
+              <div
+                class="feature-box-icon margin-35px-bottom lg-margin-25px-right"
+              >
+                <h4
+                  style="color: #00b8e6"
+                  class="alt-font font-weight-600 mb-0"
+                >
+                  03
+                </h4>
+              </div>
+
+              <div class="feature-box-content last-paragraph-no-margin">
+                <span
+                  class="
+                    alt-font
+                    font-weight-500
+                    text-large
+                    margin-15px-bottom
+                    d-block
+                    text-extra-dark-gray
+                    sm-margin-10px-bottom
+                  "
+                  >Fatigue syndrome</span
+                >
+                <p>
+                  Lorem ipsum dolor sit consectetur adipiscing incididunt ut
+                  labore
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end feature box item -->
+          <!-- start feature box item -->
+          <div
+            class="
+              col
+              margin-30px-bottom
+              xs-margin-15px-bottom
+              wow
+              animate__fadeIn
+            "
+          >
+            <div
+              class="
+                feature-box
+                bg-white
+                box-shadow-small box-shadow-large-hover
+                border-radius-6px
+                padding-4-half-rem-all
+                lg-padding-3-rem-all
+              "
+            >
+              <div
+                class="feature-box-icon margin-35px-bottom lg-margin-25px-right"
+              >
+                <h4
+                  style="color: #00b8e6"
+                  class="alt-font font-weight-600 mb-0"
+                >
+                  04
+                </h4>
+              </div>
+
+              <div class="feature-box-content last-paragraph-no-margin">
+                <span
+                  class="
+                    alt-font
+                    font-weight-500
+                    text-large
+                    margin-15px-bottom
+                    d-block
+                    text-extra-dark-gray
+                    sm-margin-10px-bottom
+                  "
+                  >Depression experts</span
+                >
+                <p>
+                  Lorem ipsum dolor sit consectetur adipiscing incididunt ut
+                  labore
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end feature box item -->
+          <!-- start feature box item -->
+          <div
+            class="
+              col
+              margin-30px-bottom
+              xs-margin-15px-bottom
+              wow
+              animate__fadeIn
+            "
+          >
+            <div
+              class="
+                feature-box
+                bg-white
+                box-shadow-small box-shadow-large-hover
+                border-radius-6px
+                padding-4-half-rem-all
+                lg-padding-3-rem-all
+              "
+            >
+              <div
+                class="feature-box-icon margin-35px-bottom lg-margin-25px-right"
+              >
+                <h4
+                  style="color: #00b8e6"
+                  class="alt-font font-weight-600 mb-0"
+                >
+                  05
+                </h4>
+              </div>
+
+              <div class="feature-box-content last-paragraph-no-margin">
+                <span
+                  class="
+                    alt-font
+                    font-weight-500
+                    text-large
+                    margin-15px-bottom
+                    d-block
+                    text-extra-dark-gray
+                    sm-margin-10px-bottom
+                  "
+                  >Rheumatoid arthritis</span
+                >
+                <p>
+                  Lorem ipsum dolor sit consectetur adipiscing incididunt ut
+                  labore
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end feature box item -->
+          <!-- start feature box item -->
+          <div
+            class="
+              col
+              margin-30px-bottom
+              xs-margin-15px-bottom
+              wow
+              animate__fadeIn
+            "
+          >
+            <div
+              class="
+                feature-box
+                bg-white
+                box-shadow-small box-shadow-large-hover
+                border-radius-6px
+                padding-4-half-rem-all
+                lg-padding-3-rem-all
+              "
+            >
+              <div
+                class="feature-box-icon margin-35px-bottom lg-margin-25px-right"
+              >
+                <h4
+                  style="color: #00b8e6"
+                  class="alt-font font-weight-600 mb-0"
+                >
+                  06
+                </h4>
+              </div>
+
+              <div class="feature-box-content last-paragraph-no-margin">
+                <span
+                  class="
+                    alt-font
+                    font-weight-500
+                    text-large
+                    margin-15px-bottom
+                    d-block
+                    text-extra-dark-gray
+                    sm-margin-10px-bottom
+                  "
+                  >Premenstrual syndrome</span
+                >
+                <p>
+                  Lorem ipsum dolor sit consectetur adipiscing incididunt ut
+                  labore
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div
+            class="
+              col-12 col-xl-6 col-lg-7 col-md-8 col-sm-10
+              text-center
+              row
+              justify-content-center
+            "
+          >
+            <a
+              href="{% url 'diagnosis' %}"
+              class="
+                btn btn-fancy btn-large btn-round-edge btn-iris-blue
+                margin-30px-top
+              "
+              >Read More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section -->
+
+    <!-- start section -->
+    <section id="appointment" class="py-0">
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="
+              col-12 col-lg-12
+              bg-light-iris-blue
+              padding-15-rem-left padding-4-rem-tb
+              d-flex
+              flex-column
+              justify-content-center
+              xl-padding-15px-left
+              md-padding-6-rem-all
+              xs-padding-15px-lr
+              wow
+              animate__fadeIn
+            "
+          >
+            <div class="row justify-content-lg-center">
+              <div class="col-12 col-xl-7 col-md-11 col-sm-10">
+                <h4
+                  class="
+                    alt-font
+                    font-weight-600
+                    letter-spacing-minus-1px
+                    text-extra-dark-gray
+                    margin-5-rem-bottom
+                  "
+                >
+                  Why choose homeopathy?
+                </h4>
+                <ul class="list-style-06">
+                  <li
+                    class="
+                      margin-40px-bottom
+                      last-paragraph-no-margin
+                      d-flex
+                      align-items-center
+                      wow
+                      animate__fadeIn
+                    "
+                    data-wow-delay="0.2s"
+                  >
+                    <div>
+                      <span
+                        class="
+                          w-30px
+                          h-30px
+                          text-center
+                          bg-iris-blue
+                          rounded-circle
+                          text-white
+                          margin-25px-right
+                          d-flex
+                          flex-column
+                        "
+                        ><i class="fas fa-check"></i
+                      ></span>
+                    </div>
+                    <div>
+                      <span
+                        class="
+                          alt-font
+                          text-extra-medium text-dark-charcoal
+                          font-weight-500
+                          margin-5px-bottom
+                          d-block
+                        "
+                        >Advanced technology care</span
+                      >
+                      <p>Lorem ipsum dolor sit amet. Ut sapiente eius in amet velit eos voluptatem omnis non omnis possimus hic sequi eligendi ea quisquam internos 33 voluptas dolorem. Qui obcaecati voluptates id totam tempora quia. </p>
+                    </div>
+                  </li>
+                  <li
+                    class="
+                      margin-40px-bottom
+                      last-paragraph-no-margin
+                      d-flex
+                      align-items-center
+                      wow
+                      animate__fadeIn
+                    "
+                    data-wow-delay="0.4s"
+                  >
+                    <div>
+                      <span
+                        class="
+                          w-30px
+                          h-30px
+                          text-center
+                          bg-iris-blue
+                          rounded-circle
+                          text-white
+                          margin-25px-right
+                          d-flex
+                          flex-column
+                        "
+                        ><i class="fas fa-check"></i
+                      ></span>
+                    </div>
+                    <div>
+                      <span
+                        class="
+                          alt-font
+                          text-extra-medium text-dark-charcoal
+                          font-weight-500
+                          margin-5px-bottom
+                          d-block
+                        "
+                        >Our best qualified team</span
+                      >
+                      <p>Lorem ipsum dolor sit amet. Ut sapiente eius in amet velit eos voluptatem omnis non omnis possimus hic sequi eligendi ea quisquam internos 33 voluptas dolorem. Qui obcaecati voluptates id totam tempora quia. </p>
+                    </div>
+                  </li>
+                  <li
+                    class="
+                      margin-40px-bottom
+                      last-paragraph-no-margin
+                      d-flex
+                      align-items-center
+                      wow
+                      animate__fadeIn
+                    "
+                    data-wow-delay="0.4s"
+                  >
+                    <div>
+                      <span
+                        class="
+                          w-30px
+                          h-30px
+                          text-center
+                          bg-iris-blue
+                          rounded-circle
+                          text-white
+                          margin-25px-right
+                          d-flex
+                          flex-column
+                        "
+                        ><i class="fas fa-check"></i
+                      ></span>
+                    </div>
+                    <div>
+                      <span
+                        class="
+                          alt-font
+                          text-extra-medium text-dark-charcoal
+                          font-weight-500
+                          margin-5px-bottom
+                          d-block
+                        "
+                        >Emergency care services</span
+                      >
+                      <p>Lorem ipsum dolor sit amet. Ut sapiente eius in amet velit eos voluptatem omnis non omnis possimus hic sequi eligendi ea quisquam internos 33 voluptas dolorem. Qui obcaecati voluptates id totam tempora quia. </p>
+                    </div>
+                  </li>
+                </ul>
+                <a
+                  href="{% url 'diagnosis' %}"
+                  class="
+                    btn
+                    section-link
+                    btn-fancy btn-large btn-round-edge btn-iris-blue
+                    margin-35px-top
+                  "
+                  >More treatments</a
+                >
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- end section -->
+    <!-- start section -->
+    <section>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div
+            class="
+              col-12 col-lg-6 col-md-8 col-sm-10
+              text-center
+              margin-6-rem-bottom
+              sm-margin-3-half-rem-bottom
+            "
+          >
+            <span
+              class="
+                alt-font
+                font-weight-500
+                text-iris-blue text-uppercase
+                d-block
+                margin-20px-bottom
+                letter-spacing-1px
+              "
+              >Patient testimonials</span
+            >
+            <h4
+              class="
+                alt-font
+                font-weight-600
+                text-extra-dark-gray
+                letter-spacing-minus-1px
+              "
+            >
+              Explore our very satisfied patient testimonials
+            </h4>
+          </div>
+        </div>
+        <div
+          class="
+            row row-cols-1 row-cols-lg-3 row-cols-md-2
+            justify-content-center
+            margin-9-rem-bottom
+            sm-margin-5-rem-bottom
+            xs-margin-2-half-rem-bottom
+          "
+        >
+          <!-- start testimonial item -->
+          <div
+            class="col col-sm-8 md-margin-30px-bottom wow animate__fadeIn"
+            data-wow-delay="0.2s"
+          >
+            <div
+              class="
+                testimonials testimonials-style-04
+                last-paragraph-no-margin
+              "
+            >
+              <div
+                class="
+                  testimonials-bubble
+                  border-radius-5px border-all border-color-extra-light-gray
+                  bg-white
+                  padding-30px-tb padding-40px-lr
+                  margin-35px-bottom
+                "
+              >
+                <p>
+                  Lorem ipsum dolor amet consectetur do tempor incididunt labore
+                  et dolore magna nostrud exercitation ullamco.
+                </p>
+              </div>
+              <div class="author padding-20px-lr">
+                <img
+                  class="rounded-circle w-60px h-60px margin-15px-right"
+                  src="{% static 'all_images/testimonial1.jpg' %}"
+                  alt=""
+                />
+                <div class="d-inline-block align-middle">
+                  <span
+                    class="
+                      alt-font
+                      text-medium
+                      font-weight-500
+                      line-height-16px
+                      text-extra-dark-gray
+                      d-block
+                    "
+                    >Durgesh Jadhav</span
+                  >
+                  <a href="#" class="text-very-small letter-spacing-2px"
+                    ><i class="fas fa-star text-orange"></i
+                    ><i class="fas fa-star text-orange"></i
+                    ><i class="fas fa-star text-orange"></i
+                    ><i class="fas fa-star text-orange"></i
+                    ><i class="fas fa-star text-orange"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end testimonial item -->
+          <!-- start testimonial item -->
+          <div
+            class="col col-sm-8 md-margin-30px-bottom wow animate__fadeIn"
+            data-wow-delay="0.4s"
+          >
+            <div
+              class="
+                testimonials testimonials-style-04
+                last-paragraph-no-margin
+              "
+            >
+              <div
+                class="
+                  testimonials-bubble
+                  border-radius-5px border-all border-color-extra-light-gray
+                  bg-white
+                  padding-30px-tb padding-40px-lr
+                  margin-35px-bottom
+                "
+              >
+                <p>
+                  Lorem ipsum dolor amet consectetur do tempor incididunt labore
+                  et dolore magna nostrud exercitation ullamco.
+                </p>
+              </div>
+              <div class="author padding-20px-lr">
+                <img
+                  class="rounded-circle w-60px h-60px margin-15px-right"
+                  src="{% static 'all_images/testimonial2.jpg' %}"
+                  alt=""
+                />
+                <div class="d-inline-block align-middle">
+                  <span
+                    class="
+                      alt-font
+                      text-medium
+                      font-weight-500
+                      line-height-16px
+                      text-extra-dark-gray
+                      d-block
+                    "
+                    >Sunil Suryavanshi</span
+                  >
+                  <a href="#" class="text-very-small letter-spacing-2px"
+                    ><i class="fas fa-star text-orange"></i
+                    ><i class="fas fa-star text-orange"></i
+                    ><i class="fas fa-star text-orange"></i
+                    ><i class="fas fa-star text-orange"></i
+                    ><i class="fas fa-star text-orange"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end testimonial item -->
+          <!-- start testimonial item -->
+          <div class="col col-sm-8 wow animate__fadeIn" data-wow-delay="0.6s">
+            <div
+              class="
+                testimonials testimonials-style-04
+                last-paragraph-no-margin
+              "
+            >
+              <div
+                class="
+                  testimonials-bubble
+                  border-radius-5px border-all border-color-extra-light-gray
+                  bg-white
+                  padding-30px-tb padding-40px-lr
+                  margin-35px-bottom
+                "
+              >
+                <p>
+                  Lorem ipsum dolor amet consectetur do tempor incididunt labore
+                  et dolore magna nostrud exercitation ullamco.
+                </p>
+              </div>
+              <div class="author padding-20px-lr">
+                <img
+                  class="rounded-circle w-60px h-60px margin-15px-right"
+                  src="{% static 'all_images/testimonial3.jpg' %}"
+                  alt=""
+                />
+                <div class="d-inline-block align-middle">
+                  <span
+                    class="
+                      alt-font
+                      text-medium
+                      font-weight-500
+                      line-height-16px
+                      text-extra-dark-gray
+                      d-block
+                    "
+                    >Suraj Ahire</span
+                  >
+                  <a href="#" class="text-very-small letter-spacing-2px"
+                    ><i class="fas fa-star text-orange"></i
+                    ><i class="fas fa-star text-orange"></i
+                    ><i class="fas fa-star text-orange"></i
+                    ><i class="fas fa-star text-orange"></i
+                    ><i class="fas fa-star text-orange"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end testimonial item -->
+        </div>
+        <div class="row justify-content-center">
+          <div
+            class="col-12 col-md-8 text-center wow animate__zoomIn"
+            data-wow-delay="0.6s"
+          >
+            <img src="{% static 'all_images/review.png' %}" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section -->
+
+    {% endblock %}

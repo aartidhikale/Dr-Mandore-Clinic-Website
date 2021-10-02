@@ -1,0 +1,250 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Add Image-page</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="author" content="ThemeZaa">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+        <!-- favicon icon -->
+        <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon-57x57.png' %}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/apple-touch-icon-72x72.png' %}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/apple-touch-icon-114x114.png' %}">
+        <!-- style sheets and font icons  -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-icons.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/theme-vendors.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<style>
+
+
+
+h1 {
+  text-align: center;  
+
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+
+
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+</style>
+    </head>
+    <body data-mobile-nav-style="classic">
+     
+      <!-- start header -->
+          <header>
+      <nav
+        class="
+          navbar navbar-expand-lg navbar-boxed navbar-dark
+          bg-transparent
+          header-light
+          fixed-top
+          header-reverse-scroll
+        "
+      >
+        <div class="container-fluid nav-header-container">
+          <div class="col-auto col-sm-6 col-lg-2 mr-auto pl-lg-0">
+            <a class="navbar-brand" href="#">
+              <img src="{% static 'all_images/logo-3.png' %}" class="default-logo" alt="" />
+              <img src="{% static 'all_images/logo-3.png' %}" class="alt-logo" alt="" />
+              <img src="{% static 'all_images/logo-3.png' %}" class="mobile-logo" alt="" />
+            </a>
+          </div>
+          <div class="col-auto col-lg-8 menu-order px-lg-0">
+            <button
+              class="navbar-toggler float-right"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-line"></span>
+              <span class="navbar-toggler-line"></span>
+              <span class="navbar-toggler-line"></span>
+              <span class="navbar-toggler-line"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-center"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav alt-font">
+                <li class="nav-item">
+                  <a href="{% url 'home' %}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'about' %}" class=" nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'consult' %}  " class="nav-link">Consult</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'diagnosis' %}" class="nav-link">Diagnosis</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'faq' %}" class="nav-link">FAQ's</a>
+                </li>
+
+                 <li class="nav-item">
+                  <a href="{% url 'portfolio' %}" class="nav-link">Portfolio</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-auto col-lg-2 text-right pr-0 font-size-0">
+            <div class="header-language dropdown d-lg-inline-block">
+              <a href="login-signup.html"
+                ><i style="color:#22CEC8;" class="fas fa-user icon-extra-small align-middle" ></i ></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="section">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-md-8">
+                  <div class="card">
+                      <div class="card-header">
+                          <h2 class="fw-bold">Add FAQ</h2>
+                      </div>
+                      <div class="card-body">
+                          <form action="" method="POST" enctype="multipart/form-data">
+                              {% csrf_token %}
+                              <div class="mb-3">
+                                  <label for="" class="form-label">Question</label>
+                                  <input type="text" Required name="question" name="question" class="form-control">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="" class="form-label">Answer</label>
+                                  <input type="text" Required name="answer" class="form-control">
+                              </div>
+                             
+                               
+                              <button type="submit" class="btn btn-primary">Save</button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    
+
+
+
+
+
+
+
+        
+
+
+
+        
+       
+         
+        <!-- end section -->
+   <footer style="background-color: #3d3b3c;" class="footer-dark">
+            <div class="container">
+
+            <div class="footer-top  padding-two-tb md-padding-10px-tb ">
+            
+                    <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2  ">
+
+
+                  <!-- start feature box item -->
+                    <div class="col col-sm-8 md-margin-30px-bottom xs-margin-15px-bottom ">
+                        <div class="feature-box   overflow-hidden ">
+                         <span class="alt-font font-weight-500 d-block text-white margin-20px-bottom xs-margin-10px-bottom">
+                                <img  src="{% static 'all_images/logo-3.png' %}" class="default-logo" width="200px"  alt="">
+                            </span>
+                              <p class="w-85 margin-15px-bottom">27 Eden walk eden centre, Orchard view, Paris, France</p>
+                            
+                        </div>
+                    </div>
+
+                    <div  class="col col-sm-8 md-margin-30px-bottom xs-margin-15px-bottom  ">
+                        <div class="feature-box   overflow-hidden ">
+                            <span class="alt-font font-weight-500 d-block text-white margin-20px-bottom xs-margin-10px-bottom">Get in touch</span>
+                            <div><i  class="feather icon-feather-phone-call icon-very-small margin-10px-right text-white"></i><a href="tel:2345678910">+91 234 567 8910</a></div>
+                            <div><i class="feather icon-feather-mail icon-very-small margin-10px-right text-white"></i><a href="mailto:ahiresuraj66@gmail.com">ahiresuraj66@gmail.com</a></div>
+                            
+                        </div>
+                    </div>
+
+                    <div  class="col col-sm-8 md-margin-30px-bottom xs-margin-15px-bottom ">
+                        <div class="feature-box   overflow-hidden ">
+                            <span class="alt-font font-weight-500 d-block text-white margin-20px-bottom">Opening hours</span>
+                            <div>Monday - Friday 06:00 AM - 10:00 PM</div>
+                            <div>Saturday 09:00 AM - 08:00 PM</div>
+                            <div>Sunday Closed</div>
+                            
+                        </div>
+                    </div>
+
+                </div>        
+                </div>
+                
+            </div>
+            <div class="footer-bottom padding-20px-tb border-top border-color-white-transparent">
+                <div class="container padding-0px-lr margin-0px-lr "> 
+                        <div class=" text-center last-paragraph-no-margin sm-margin-20px-bottom">
+                            <p>Copyrights &copy; 2021 | All Rights Reserved</p>
+                    </div>
+                </div>
+                </div>
+         
+        </footer>
+
+        <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/theme-vendors.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+    <!-- start hero section -->
+        <section class="p-0 parallax" data-parallax-background-ratio="0.3" style="background-image: url('{% static 'all_images/back-contact.jpg' %}');">
+            <div class="container-fluid position-relative wow animate__fadeIn " data-wow-delay="0.2s">
+                <div class="row small-screen md-h-300px sm-h-300px">
+                    <div class="col-12 col-xl-5 offset-lg-1 col-lg-6 col-md-8 col-sm-10 d-flex flex-column justify-content-center md-padding-35px-left xs-padding-15px-left">
+                         <h2 class="text-white alt-font font-weight-500 letter-spacing-minus-1px line-height-50 sm-line-height-45 xs-line-height-30 no-margin-bottom"><span class="font-weight-600">Contact us</span></h2>
+                        <h6 style="color:#22CEC8;  " class="alt-font  margin-15px-bottom d-inline-block">Book your appointment now</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end hero section -->
+
+
+
+        <section class="bg-white">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12 col-xl-5 col-lg-5  text-center text-lg-left xs-margin-20px-top  wow animate__fadeIn" data-wow-delay="0.6s">
+                        <h4 class="alt-font font-weight-400 text-extra-dark-gray letter-spacing-minus-1px margin-35px-bottom"><span class="font-weight-600">Connect with Us</span></h4>
+                        <p class="w-90 d-inline-block">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor incididunt ut labore et</p>
+                        <div>
+                            <span style=" color: black; " class="alt-font font-weight-500 d-block">Clinic Address</span>
+                            <div><p class=" margin-10px-right">Pawan Nagar <br>   Mumbai-4324</p></div>
+                        </div>
+                        <div>
+                            <span style=" color: black; " class="alt-font font-weight-500 d-block">Helpline number</span>
+                            <div><p  class=" margin-10px-right">+91 9021792540 /+91 9876543211</p></div>
+                        </div>
+                        <div>
+                             <span style=" color: black; " class="alt-font font-weight-500 d-block">E-mail</span>
+                            <div><i class= "margin-10px-right feather icon-feather-mail icon-very-small  "></i><a href="#">info@yourdomain.com</a></div>  
+                        </div><br>
+                       <div class=" elements-social social-icon-style-05 " >
+                        <ul class="small-icon">
+                            <li><a class="facebook text-extra-dark-gray text-sm-left" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a class="twitter text-extra-dark-gray text-sm-left" href="http://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a class="instagram text-extra-dark-gray text-sm-left" href="http://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a class="linkedin text-extra-dark-gray text-sm-left" href="http://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+
+                        </ul>
+                        
+                        </div> 
+                       
+                    </div>         
+                    <div class="col-12 col-xl-6 col-lg-5 col-md-10  wow animate__fadeIn" data-wow-delay="0.3s">
+                        <div class="position-relative w-120 md-w-100">
+                            <div class="col h-450px p-0 md-h-450px xs-h-300px">
+                                <iframe class="w-100 h-100 " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d134289.17583524517!2d73.74363258242008!3d19.987410356970702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddd290b09914b3%3A0xcb07845d9d28215c!2sNashik%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1629307957487!5m2!1sen!2sin"></iframe>
+                            </div>    
+                        </div>
+                    </div>
+                    
+                </div>
+           
+                
+            </div>
+
+        </section>
+
+
+
+
+
+
+<section class=" wow animate__fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-xl-6 col-lg-7 text-center margin-4-half-rem-bottom md-margin-3-rem-bottom">
+                                <span class="alt-font letter-spacing-minus-1-half text-extra-medium d-block margin-5px-bottom">Give your presious feedback</span>
+                                <h4 class="alt-font font-weight-600 text-extra-dark-gray">Give Feedback</h4>
+                            </div>
+                            <div class="col-12">
+                                <!-- start contact form -->
+                                <form action="" method="post">{% csrf_token %}
+                                    
+                                    <div class="row row-cols-1 row-cols-md-2">
+                                        <div class="col margin-4-rem-bottom sm-margin-25px-bottom">
+                                            <input class="medium-input bg-white margin-25px-bottom required" type="text" name="name" placeholder="Your name">
+                                            <input class="medium-input bg-white margin-25px-bottom required" type="email" name="email" placeholder="Your email address">
+                                            <input class="medium-input bg-white mb-0" type="tel" name="phone" placeholder="Your mobile">
+                                        </div>
+                                        <div class="col margin-4-rem-bottom sm-margin-10px-bottom">
+                                            <textarea class="medium-textarea h-200px bg-white" name="comment" placeholder="Your message"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col text-center text-md-center">
+                                         
+                                           <button class="btn btn-medium btn-iris-blue " type="submit" name="submit">Send Message</button>
+                                        </div>
+
+                                   
+
+
+                                </form>
+                                <!-- end contact form -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+      
+{% endblock %}
+   

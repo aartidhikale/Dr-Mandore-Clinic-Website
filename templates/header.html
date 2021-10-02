@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <title>Dr. Mandore</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="ThemeZaa" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1"
+    />
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="" />
+    <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon-57x57.png' %}" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="{% static 'images/apple-touch-icon-72x72.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="{% static 'images/apple-touch-icon-114x114.png' %}"
+    />
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-icons.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/theme-vendors.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+    <!-- revolution slider -->
+    <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/layers.css' %}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'revolution/css/navigation.css' %}"
+    />
+  </head>
+  <body data-mobile-nav-style="classic">
+    <!-- start header -->
+   <header>
+      <nav
+        class="
+          navbar navbar-expand-lg navbar-boxed navbar-dark
+          bg-transparent
+          header-light
+          fixed-top
+          header-reverse-scroll
+        "
+      >
+        <div class="container-fluid nav-header-container">
+          <div class="col-auto col-sm-6 col-lg-2 mr-auto pl-lg-0">
+            <a class="navbar-brand" href="#">
+              <img src="{% static 'all_images/logo-3.png' %}" class="default-logo" alt="" />
+              <img src="{% static 'all_images/logo-3.png' %}" class="alt-logo" alt="" />
+              <img src="{% static 'all_images/logo-3.png' %}" class="mobile-logo" alt="" />
+            </a>
+          </div>
+          <div class="col-auto col-lg-8 menu-order px-lg-0">
+            <button
+              class="navbar-toggler float-right"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-line"></span>
+              <span class="navbar-toggler-line"></span>
+              <span class="navbar-toggler-line"></span>
+              <span class="navbar-toggler-line"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-center"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav alt-font">
+                <li class="nav-item">
+                  <a href="{% url 'home' %}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'about' %}" class=" nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'consult' %}" class="nav-link">Consult</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'diagnosis' %}" class="nav-link">Diagnosis</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'faq' %}" class="nav-link">FAQ's</a>
+                </li>
+
+                 <li class="nav-item">
+                  <a href="{% url 'portfolio' %}" class="nav-link">Gallery</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-auto col-lg-2 text-right pr-0 font-size-0">
+            <div class="header-language dropdown d-lg-inline-block">
+              <a href="{% url 'login' %}"
+                ><i style="color:#22CEC8;" class="fas fa-user icon-extra-small align-middle" ></i ></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
