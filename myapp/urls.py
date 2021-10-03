@@ -18,6 +18,7 @@ urlpatterns = [
     path('portfolio/', views.portfolio, name='portfolio'),
     path('contact/', views.contact, name='contact'),
     path('login/', views.login, name='login'),
+    path('register/',views.register,name='register'),
     path('diagnosisInfo/', views.diagnosisInfo, name='diagnosisInfo'),
     path('user/', views.user, name='user'),
     path('uploadfaq/', views.uploadFaq, name="uploadfaq"),

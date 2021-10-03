@@ -1,9 +1,12 @@
-from django.shortcuts import render
-from django.http import HttpResponse
 
+from django.http import HttpResponse
+from django.contrib.auth.models import User
+from django.contrib.auth.models import auth
 from myapp.models import Consult1
 from .models import Item1,Contact,FAQ
 from django.core.files.storage import FileSystemStorage
+from django.core.checks import messages
+from django.shortcuts import redirect, render
 # Create your views here.
 
 
@@ -57,6 +60,10 @@ def diagnosis(request):
 
 def faq(request):
    products1 = FAQ.objects.all()
+   products2=products1
+   
+   
+   
    context = {'products1':products1}
    return render(request, 'faq-page.html',context)
 
@@ -85,12 +92,50 @@ def contact(request):
 
 
 def login(request):
-   # return HttpResponse("index page ")
-    return render(request, 'login-signup.html')
+    if request.method == 'POST' :
+        username=request.POST['username']
+        password=request.POST['password']
+        print(username)
+        user=auth.authenticate(username=username,password=password)
+        print(user)
+        if user is not None:
+            auth.login(request,user)
+            print("correct")
+            return render(request,"user-profile.html")
+        else:
+                
+            return render(request,'register.html')
+    else:
+
+     return render(request, 'login.html')
+
+def register(request):
+    if request.method == 'POST':
+       
+        username=request.POST['username']
+        #email=request.POST['email']
+        password=request.POST['password']
+        print(username)
+        if User.objects.filter(username=username).exists():
+            #messages.info(request,'Username already exist')
+            return render(request, 'login.html')
+            print("Username already exist")
+        #elif User.objects.filter(email=email).exists():
+             #messages.info(request,'Email already exist')
+             #return render(request, 'login.html')
+             #print("Email already exist")
+        else:
+          user=User.objects.create_user(username=username,password=password)
+          user.save()
+          print('user created')
+          return render(request,'login.html')
+    else:
+     
+     return render(request, 'register.html')
 
 
 def user(request):
-   # return HttpResponse("index page ")
+    # return HttpResponse("index page ")
     return render(request, 'user-profile.html')
 
 

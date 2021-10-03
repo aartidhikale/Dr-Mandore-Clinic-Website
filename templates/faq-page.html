@@ -29,13 +29,15 @@
                   
                     <div class="row" >
                        
-                    <div class="col-12 col-lg-12 md-margin-50px-bottom sm-margin-30px-bottom wow animate__fadeIn ">
-                      
+                    <div class="col-6 col-lg-12 md-margin-50px-bottom sm-margin-30px-bottom wow animate__fadeIn ">
+                       
                         <div class="panel-group accordion-event accordion-style-03" id="accordion2" data-active-icon="fa-angle-down" data-inactive-icon="fa-angle-right">
                             <!-- start accordion item -->
-                           
+                            
+                            {% for p in products1 %}
+                            
                             <div class="panel bg-white box-shadow-small border-radius-5px">
-                                {% for p in products1 %}
+                              
                                 <div class="panel-heading active-accordion">
                                    
                                     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne" aria-expanded="false">
@@ -49,10 +51,12 @@
                                 <div id="collapseOne" class="panel-collapse collapse show" data-parent="#accordion2">
                                     <div class="panel-body">{{ p.answer }}</div>
                                 </div>
-                                {% endfor %} 
+                           
                                
                             </div>
                             <!-- end accordion item -->
+                            {% endfor %} 
+                            
                             
                             
                         </div>
