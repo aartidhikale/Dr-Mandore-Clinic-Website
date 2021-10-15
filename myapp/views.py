@@ -1,14 +1,14 @@
-
-from django.http import HttpResponse
-from django.contrib.auth.models import User
-from django.contrib.auth.models import auth
-from myapp.models import Consult1
-from .models import Item1,Contact,FAQ
-from django.core.files.storage import FileSystemStorage
 from django.core.checks import messages
-from django.shortcuts import redirect, render
+from django.shortcuts import render,redirect
+from django.http import HttpResponse
+from django.contrib.auth.models import User,auth
+from myapp.models import Consult1
+from myapp.models import Item1,Contact,FAQ
+from django.core.files.storage import FileSystemStorage
+#from django.contrib.messages import constants as messages
+from django.contrib import messages
 # Create your views here.
-
+from myapp.models import Register
 
 def home(request):
    # return HttpResponse("index page ")
@@ -37,7 +37,7 @@ def consult(request):
       
       a=Consult1(firstname=Firstname,lastname=Lastname,Email=email,phone=Phone,address=Address,Birthdate=birthdate,Birthmonth=birthmonth,Birthyear=birthyear,Hobbies=hobbies,Diagnosis=diagnosis,Work=work,Diet=diet)
       a.save()
-      
+      messages.success(request,'Consulation send  successfully')
       
       
       return render(request, 'about-us-page.html')
@@ -60,10 +60,6 @@ def diagnosis(request):
 
 def faq(request):
    products1 = FAQ.objects.all()
-   products2=products1
-   
-   
-   
    context = {'products1':products1}
    return render(request, 'faq-page.html',context)
 
@@ -85,58 +81,135 @@ def contact(request):
         
 
         prod1.save()
-        print("Feedback sent sucessfully ")
+        messages.success(request,'Feedback send successfully !!!!')
       
         return render(request, 'contact-us-page.html')
    return render(request, 'contact-us-page.html')
 
+def user(request):
+    
+     
+    if request.method=='GET' :
+        
+         User2 = Register.objects.all()
+        
+            
+         for  p in User2:
+                       
+                            context={"p":p}
+         return render(request,'user-profile.html',context)
+                           
+                        
+                            
+                                
+                                
+                           
+        
+        
+                            
+                            
+    else:
+       
+       return render(request,"login.html")
+           
+
+
+
+
 
 def login(request):
-    if request.method == 'POST' :
-        username=request.POST['username']
-        password=request.POST['password']
-        print(username)
-        user=auth.authenticate(username=username,password=password)
-        print(user)
+    if request.method=='POST':
+        
+        user_name=request.POST['username']
+        password1=request.POST['password']
+        
+        user=auth.authenticate(username=user_name,password=password1)
         if user is not None:
             auth.login(request,user)
-            print("correct")
-            return render(request,"user-profile.html")
-        else:
-                
-            return render(request,'register.html')
+          
+            User2 = Register.objects.all()
+            print(User2)
+            
+            for  p in User2:
+                        if(p.username==user_name and p.password==password1):
+                            context={"p":p}
+            #return render(request,'user-profile.html',context)       
+            messages.success(request,'Login successfully')
+            return redirect('/user/',context)
+        else:  
+            messages.error(request,'Invalid credentials')     
+            return render(request,'login.html')
+
+    
     else:
+        return render(request,'login.html')
+        
 
-     return render(request, 'login.html')
+def register2(username,password,email,first_name,last_name):
+        user=User.objects.create_user(username=username,password=password,email=email,first_name=first_name,last_name=last_name)
+         #reg=Register.objects.create_user(mobile=mobile,gender=gender,city=city,Birthdate=birthdate,image=image)
+        user.save()
+         #user.save() 
 
+   
 def register(request):
-    if request.method == 'POST':
-       
+    if request.method=='POST':
+        reg=Register()
+        reg.Birthdate=request.POST['DOB']
+        reg.Email=request.POST['email']
+        reg.City=request.POST['city']
+        reg.Mobile=request.POST['mobile']
+        reg.Gender=request.POST['gender']
+        reg.firstname=request.POST['first_name']
+        reg.lastname=request.POST['last_name']
+        reg.username=request.POST['username']
+        reg.password=request.POST['password']
+        first_name=request.POST['first_name']
+        last_name=request.POST['last_name']
         username=request.POST['username']
-        #email=request.POST['email']
         password=request.POST['password']
-        print(username)
-        if User.objects.filter(username=username).exists():
-            #messages.info(request,'Username already exist')
-            return render(request, 'login.html')
-            print("Username already exist")
-        #elif User.objects.filter(email=email).exists():
-             #messages.info(request,'Email already exist')
-             #return render(request, 'login.html')
-             #print("Email already exist")
+        email=request.POST['email']
+        
+
+        if len(request.FILES) != 0:
+            reg.imageuser = request.FILES['image']
+       
+        #prod3=Item2()
+        #if len(request.FILES)!=0:
+            #prod3.image=request.FILES['image']
+            #prod3.save()
+        if User.objects.filter(email=email).exists():
+         messages.error(request,'Email already exist')
+         return render(request,'login-signup.html')
+        elif User.objects.filter(username=username).exists():
+            messages.error(request,'Username already existes')
+            return render(request,'login-signup.html')
         else:
-          user=User.objects.create_user(username=username,password=password)
-          user.save()
-          print('user created')
-          return render(request,'login.html')
+         #user=User.objects.create_user(username=username,password=password,email=email,first_name=first_name,last_name=last_name)
+         #reg=Register.objects.create_user(mobile=mobile,gender=gender,city=city,Birthdate=birthdate,image=image)
+         print("register")
+         reg.save()
+         register2(username,password,email,first_name,last_name)
+         #user.save()
+         messages.success(request,'Registration form submitted successfully! kindly login')
+         return render(request,'login-signup.html')
+       
     else:
-     
-     return render(request, 'register.html')
+        return render(request, 'login-signup.html')
+        #return redirect('/')
+       
+        #if User.objects.filter(username=username).exists():
+              
+             # return redirect('login-signup')
+       # elif  User.objects.filter(email=email).exists():
+             #messages.info(request,'Email already exist')
+       
+            
+
+    
 
 
-def user(request):
-    # return HttpResponse("index page ")
-    return render(request, 'user-profile.html')
+
 
 
 

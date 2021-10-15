@@ -4,7 +4,7 @@
 
  
 <!-- start hero section -->
-        <section class="p-0 parallax" data-parallax-background-ratio="0.3" style="background-image: url('{% static 'all_images/login-mandore.jpeg' %}');">
+        <section class="p-0 parallax" data-parallax-background-ratio="0.3" style="background-image: url('{% static 'all_images/12.jpeg' %}');">
             <div class="container-fluid position-relative wow animate__fadeIn " data-wow-delay="0.2s">
                 <div class="row small-screen md-h-300px sm-h-300px">
                     <div class="col-12 col-xl-5 offset-lg-1 col-lg-6 col-md-8 col-sm-10 d-flex flex-column justify-content-center md-padding-35px-left xs-padding-15px-left">
@@ -20,25 +20,49 @@
 <section class="half-section wow animate__fadeIn" style="visibility: visible; animation-name: fadeIn;">
             <div class="container">
                 <div class="row justify-content-center">
-                   
-                    <div class="bg-light-gray col-12 col-xl-5 offset-xl-1 col-md-6 lg-padding-30px-lr md-padding-15px-lr">
+                    <div class="bg-light-gray col-12 col-xl-5 col-md-6 lg-padding-30px-lr md-padding-15px-lr sm-margin-40px-bottom">
                         <form action="" method="post">
-                            {% csrf_token %}
-                            <!--class=" padding-4-rem-all lg-margin-35px-top md-padding-2-half-rem-all"-->
-                               <h6 class="alt-font font-weight-500 text-extra-dark-gray">Login</h6>
-                                <label class="margin-15px-bottom">Username or email address <span class="required-error text-radical-red">*</span></label>
-                                <input class="small-input bg-white margin-20px-bottom required" type="text" name="username" placeholder="Enter your email">
-                                <label class="margin-15px-bottom">Password <span class="required-error text-radical-red">*</span></label>
-                                <input class="small-input bg-white margin-20px-bottom required" type="password" name="password" placeholder="Enter your password">
-                                <button class="btn btn-medium btn-iris-blue " type="submit" name="submit">Login</button>
-                              
-    
-             
-                               
-                            </form>
-                        
+                       {% csrf_token %}
+                           <h6 class="alt-font font-weight-500 text-extra-dark-gray">Login</h6>
+                            <label class="margin-15px-bottom">Username or email address<span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="text" name="username" placeholder="Enter your email">
+                            <label class="margin-15px-bottom">Password <span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="password" name="password" placeholder="Enter your password">
+                            {% for message in messages %}
+                             <script>
+                             window.onload=function()
+                             {
+                                 alert('{{message}}')
+                             }
+                             </script>
+                            {% endfor %}
+                           <!--<label class="margin-25px-bottom">
+                                <input class="d-inline-block align-middle w-auto mb-0 margin-5px-right" type="checkbox" name="account">
+                                <span class="d-inline-block align-middle">Remember me</span> 
+                            </label>-->
+                            <button class="btn btn-medium btn-iris-blue " type="submit" name="submit">Login</button>
+                           <!-- <a href="{% url 'user' %}" class=" btn btn-medium btn-fancy btn-large w-100  btn-iris-blue margin-30px-top ">Login</a>-->
+
+         
+                            <!--<p class="text-right margin-20px-top mb-0"><a href="#" class="btn btn-link  btn-medium text-extra-dark-gray">Lost your password?</a></p>-->
+                        </form>
                     </div>
-                    
+                    <div >
+                       <!--<form >
+                        class=" padding-4-rem-all lg-margin-35px-top md-padding-2-half-rem-all"
+                           <h6 class="alt-font font-weight-500 text-extra-dark-gray">Register</h6>
+                            <label class="margin-15px-bottom">Username <span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="text" name="text" placeholder="Enter your username">
+                            <label class="margin-15px-bottom">Email address <span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="email" name="email" placeholder="Enter your email">
+                            <label class="margin-15px-bottom">Password <span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="password" name="password" placeholder="Enter your password">
+                           
+                            <p class="text-small">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="#" class="text-decoration-underline">privacy policy</a>.</p>
+                        
+                           <button class="btn btn-medium btn-fancy btn-iris-blue w-100 submit" type="submit">Register</button>
+                        </form>-->
+                    </div>
                 </div>
             </div>
         </section>

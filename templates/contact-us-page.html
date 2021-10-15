@@ -15,7 +15,14 @@
             </div>
         </section>
         <!-- end hero section -->
-
+        {% for message in messages %}
+        <script>
+        window.onload=function()
+        {
+            alert('{{message}}')
+        }
+        </script>
+       {% endfor %}
 
 
         <section class="bg-white">

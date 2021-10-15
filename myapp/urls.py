@@ -17,12 +17,10 @@ urlpatterns = [
     path('faq/', views.faq, name='faq'),
     path('portfolio/', views.portfolio, name='portfolio'),
     path('contact/', views.contact, name='contact'),
-    path('login/', views.login, name='login'),
-    path('register/',views.register,name='register'),
+    path('register/', views.register, name='register'),
     path('diagnosisInfo/', views.diagnosisInfo, name='diagnosisInfo'),
     path('user/', views.user, name='user'),
     path('uploadfaq/', views.uploadFaq, name="uploadfaq"),
-    
+    path('login/', views.login, name='login'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-

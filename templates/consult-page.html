@@ -234,7 +234,14 @@ input.invalid {
         </div>
       </div>
     </section>
-
+    {% for message in messages %}
+    <script>
+    window.onload=function()
+    {
+        alert('{{message}}')
+    }
+    </script>
+   {% endfor %}
 
 
 

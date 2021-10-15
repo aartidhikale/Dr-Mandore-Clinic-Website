@@ -1,0 +1,94 @@
+ {% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+ 
+<!-- start hero section -->
+        <section class="p-0 parallax" data-parallax-background-ratio="0.3" style="background-image: url('{% static 'all_images/12.jpeg' %}');">
+            <div class="container-fluid position-relative wow animate__fadeIn " data-wow-delay="0.2s">
+                <div class="row small-screen md-h-300px sm-h-300px">
+                    <div class="col-12 col-xl-5 offset-lg-1 col-lg-6 col-md-8 col-sm-10 d-flex flex-column justify-content-center md-padding-35px-left xs-padding-15px-left">
+                         <h3 class="text-white alt-font font-weight-500 letter-spacing-minus-1px line-height-50 sm-line-height-45 xs-line-height-30 no-margin-bottom"><span class="font-weight-600">Login-Register</span></h3>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end hero section -->
+
+
+<section class="half-section wow animate__fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="bg-light-gray col-12 col-xl-5 col-md-6 lg-padding-30px-lr md-padding-15px-lr sm-margin-40px-bottom">
+                       <!--- <form  class=" padding-4-rem-all lg-margin-35px-top md-padding-2-half-rem-all">
+                           <h6 class="alt-font font-weight-500 text-extra-dark-gray">Login</h6>
+                            <label class="margin-15px-bottom">Username or email address <span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="text" name="text" placeholder="Enter your email">
+                            <label class="margin-15px-bottom">Password <span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="password" name="password" placeholder="Enter your password">
+                            <label class="margin-25px-bottom">
+                                <input class="d-inline-block align-middle w-auto mb-0 margin-5px-right" type="checkbox" name="account">
+                                <span class="d-inline-block align-middle">Remember me</span> 
+                            </label>
+                            <a href="{% url 'user' %}" class=" btn btn-medium btn-fancy btn-large w-100  btn-iris-blue margin-30px-top ">Login</a>
+
+         
+                            <p class="text-right margin-20px-top mb-0"><a href="#" class="btn btn-link  btn-medium text-extra-dark-gray">Lost your password?</a></p>
+                        </form>
+                    </div>
+                    <div >-->
+                        <form  action="" method="post" enctype="multipart/form-data">
+                         {% csrf_token %}
+                        <!--class=" padding-4-rem-all lg-margin-35px-top md-padding-2-half-rem-all"-->
+                           <h6 class="alt-font font-weight-500 text-extra-dark-gray">Register</h6>
+                           
+                           
+                            
+                            
+                            <label class="margin-15px-bottom">Username<span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="text" name="username" placeholder="Enter your username" required>
+                           
+                            <label class="margin-15px-bottom">Email address<span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="email" name="email" placeholder="Enter your email" required>
+                            <label class="margin-15px-bottom">Last Name<span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="text" name="last_name" placeholder="Enter your Lastname" required>
+                            <label class="margin-15px-bottom">First Name<span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="text" name="first_name" placeholder="Enter your Firstname" required>
+                            <label class="margin-15px-bottom">DOB<span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="text" name="DOB" placeholder="Enter your DOB" required>
+                            <label class="margin-15px-bottom">Mobile <span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="text" name="mobile" placeholder="Enter your mobile number" required>
+                            <label class="margin-15px-bottom">Password <span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="password" name="password" placeholder="Enter your password"required>
+                            <label class="margin-15px-bottom">Gender<span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="text" name="gender" placeholder="Gender" required>
+                            <label class="margin-15px-bottom">City<span class="required-error text-radical-red">*</span></label>
+                            <input class="small-input bg-white margin-20px-bottom required" type="text" name="city" placeholder="Enter your city" required>
+
+                         <label class="margin-15px-bottom">Upload Image<span class="required-error text-radical-red">*</span></label>
+                            <input type="file"  name="image" class="small-input bg-white margin-20px-bottom required">
+                            {% for message in messages %}
+                       {% if message.tags == "error" %}
+                       <p style="color:red;">{{message}}</p>
+                       {% elif message.tags == "success" %}
+                             <script>
+                             window.onload=function()
+                             {
+                                 alert('{{message}}')
+                             }
+                             </script>
+                             {% endif %}
+                            {% endfor %}
+                           <p class="text-small">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="#" class="text-decoration-underline">privacy policy</a>.</p>
+                          
+                           <button class="btn btn-medium btn-iris-blue " type="submit" name="submit">Register</button>
+                       
+                        </form>
+                    </div>
+                  </div>
+            </div>
+        </section>
+
+ 
+{% endblock %}
